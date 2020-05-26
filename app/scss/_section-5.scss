@@ -64,6 +64,31 @@
         }
     }
 
+    &__price {
+        font-size: 16px;
+        font-weight: 400;
+        color: #969696;
+        margin-left: 44px;
+
+        &_summa {
+            color: #333333;
+        }
+
+        &_strong {
+            font-size: 22px;
+            font-weight: 700;
+            color: #333333;
+        }
+    }
+    
+    &__subtitle {
+        font-size: 16px;
+        font-weight: 400;
+        color: #999999;
+        margin-left: 44px;
+        margin-bottom: 20px;
+    }
+
     &__link {
         position: absolute;
         left: 39px;
@@ -102,36 +127,15 @@
         
     }
 
-    &__price {
-        font-size: 16px;
-        font-weight: 400;
-        color: #969696;
-
-        &_summa {
-            color: #333333;
-        }
-
-        &_strong {
-            font-size: 22px;
-            font-weight: 700;
-            color: #333333;
-        }
-    }
     &__title {
         font-size: 16px;
         font-weight: 700;
         color: #333333;
     }
 
-    &__subtitle {
-        font-size: 16px;
-        font-weight: 400;
-        color: #999999;
-    }
-
     &__group {
         left:  190px;
-        bottom: 87px;
+        bottom: 70px;
         position: relative;
         width: 70px;
         height: 14px;
