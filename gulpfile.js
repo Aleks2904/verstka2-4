@@ -17,6 +17,9 @@ var gulp         = require('gulp'), // Подключаем Gulp
 
 const jsFiles = [           //указываем путь к js файлам, первыми указываем библиотеки
     'libs/jquery/dist/jquery.min.js',
+    'libs/jquery.maskedinput/dist/jquery.maskedinput.js',
+    'app/js/select.js',
+    'app/js/maska.js'
 ]
 
 const cssFiles = [
@@ -51,7 +54,7 @@ function scripts() {
 }
 
 function img() {
-    return gulp.src(['app/img/**/*', '!app/img/**/*.svg']) // Берем все изображения из app
+    return gulp.src(['app/img/**/*', '!app/img/svg/*.svg']) // Берем все изображения из app
         .pipe(cache(imagemin({ // С кешированием
             interlaced: true,
             progressive: true,

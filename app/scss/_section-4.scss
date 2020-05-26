@@ -1,0 +1,44 @@
+.advantages {
+    margin-bottom: 70px;
+
+    &__title {
+        @extend %title-section;
+        margin-left: 42px;
+        margin-bottom: 22px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__item {
+        background-color: white;
+        width: 25%;
+        max-width: 275px;
+        padding: 44px 46px 40px 44px;
+        margin-bottom: 24px;
+        border-radius: 12.0px;
+
+        &:last-child,
+        &:nth-last-child(2),
+        &:nth-last-child(3),
+        &:nth-last-child(4){
+            margin-bottom:0;
+        }
+    }
+
+    &__svg {
+        max-width: 59px;
+        max-height: 70px;
+        fill: blue;
+    }
+
+    &__subtitle {
+        font-size: 16px;
+        line-height: 32px;
+        font-weight: 400;
+        color: #333333;
+    }
+}
