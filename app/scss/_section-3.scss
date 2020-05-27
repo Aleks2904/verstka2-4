@@ -33,7 +33,6 @@
     }
 
     &__title {
-        position: relative;
         display: inline-block;
         margin: 0;
         margin-left: 45px;
@@ -49,22 +48,21 @@
 
     &__title-link {
         position: relative;
-        z-index: 2;
         font-size: 22px;
         font-weight: 500;
         color: #cc9933;
         padding-right: 20px;
-    }
 
-    &__svg-info {
-        position: absolute;
-        right: 0;
-        top: 50%;
-
-        fill: #ffcc66;
-        width: 16px;
-
-        transform:translate(0,-50%) rotate(90deg);
+        &::after{
+            content: '';
+            @extend %arrow-right-section-2;
+            padding: 8px;
+            
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: rotate(90deg) translate(-50%);
+        }
     }
 
     &__subtitle {

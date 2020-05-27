@@ -24,29 +24,9 @@
         color: #666666;
     }
 
-    &__btn-container{
-        position: relative;
-
-        transition: transform 0.3s;
-
-        &:hover{
-            transform: scale(1.1);
-            transition: transform 0.3s;
-        }
-    }
-
-    &__svg-btn{
-        position: absolute;
-        bottom: 3px;
-        fill: #cc9933;
-        height: 16px;
-
-        transform: rotate(90deg);
-        
-    }
-
     &__personal-area {
         position: relative;
+        display: inline-block;
         font-size: 16px;
         font-weight: 400;
         color: #cc9933;
@@ -55,13 +35,32 @@
         padding-left: 22px;
 
         cursor: pointer;
-        z-index: 2;
 
         user-select:none;
 
         background: transparent;
         border: none;
         outline: none;
+
+        transition: transform 0.3s;
+
+        &:hover{
+            transform: scale(1.1);
+            transition: transform 0.3s;
+        }
+
+        &::before{
+            content: '';
+            @extend %personal-area-header;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            padding: 7.5px;
+
+            transform: rotate(90deg);
+        }
     }
 }
 

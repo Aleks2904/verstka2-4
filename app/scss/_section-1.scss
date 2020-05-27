@@ -250,9 +250,15 @@ $select-padding: 0 60px 0 16px;
         color: #ffffff;
     }
 
-    &__info-container{
-        display: inline-block;
+    &__info {
         position: relative;
+        display: inline-block;
+
+        padding-right: 20px;
+
+        font-size: 16px;
+        font-weight: 400;
+        color: #ffcc66;
 
         transition: transform 0.3s;
 
@@ -260,28 +266,18 @@ $select-padding: 0 60px 0 16px;
             transform: scale(1.1);
             transition: transform 0.3s;
         }
-    }
 
-    &__info {
-        position: relative;
-        z-index: 3;
+        &::after{
+          content: '';
+          @extend %arrow-right-section-1;
 
-        padding-right: 20px;
+          position: absolute;
+          top: 0;
+          right: 0;
 
-        font-size: 16px;
-        font-weight: 400;
-        color: #ffcc66;
-    }
+          padding: 7.5px;
 
-    &__svg-info {
-        position: absolute;
-        right: 0;
-        bottom: 2px;
-        z-index: 2;
-
-        fill: #ffcc66;
-        width: 16px;
-
-        transform: rotate(90deg);
+          transform: rotate(90deg);
+        }
     }
 }

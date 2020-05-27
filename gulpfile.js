@@ -54,7 +54,7 @@ function scripts() {
 }
 
 function img() {
-    return gulp.src(['app/img/**/*', '!app/img/svg/*.svg']) // Берем все изображения из app
+    return gulp.src(['app/img/**/*', '!app/img/svg/**/*']) // Берем все изображения из app
         .pipe(cache(imagemin({ // С кешированием
             interlaced: true,
             progressive: true,
@@ -64,34 +64,34 @@ function img() {
         .pipe(gulp.dest('dist/img'))
 }
 
-function svg() {
-    return gulp.src('app/img/svg/**/*') 
-    .pipe(svgMin({
-        js2svg: {
-            pretty: true
-        }
-    }))
-
-    .pipe(cheerio({
-        run: function($) {
-           $('[fill]').removeAttr('fill'); 
-           $('[stroke]').removeAttr('stroke'); 
-           $('[style]').removeAttr('style'); 
-        },
-        parserOptions: {xmlMode: true}
-    }))
-
-    .pipe(replace('&gt;', '>'))
-    
-    .pipe(svgSprite({
-        mode:{
-            symbol: {
-                sprite: "sprite.svg"
-            }
-        }
-    }))
-    .pipe(gulp.dest('app/img')) 
-}
+//       function svg() {
+//            return gulp.src('app/img/svg/**/*') 
+//            .pipe(svgMin({
+//                js2svg: {
+//                    pretty: true
+//                }
+//            }))
+//
+//            .pipe(cheerio({
+//                run: function($) {
+//                $('[fill]').removeAttr('fill'); 
+//                $('[stroke]').removeAttr('stroke'); 
+//                $('[style]').removeAttr('style'); 
+//                },
+//                parserOptions: {xmlMode: true}
+//            }))
+//
+//            .pipe(replace('&gt;', '>'))
+//           
+//            .pipe(svgSprite({
+//                mode:{
+//                    symbol: {
+//                        sprite: "sprite.svg"
+//                    }
+//                }
+//           }))
+//            .pipe(gulp.dest('app/img')) 
+//        }
 
 function watch() {
 
@@ -125,17 +125,17 @@ gulp.task('prebuild', async function() {
     var buildHtml = gulp.src('app/*.html') // Переносим HTML в продакшен
     .pipe(gulp.dest('dist'));
 
-    var buildPHP = gulp.src('app/php/**/*')
-    .pipe(gulp.dest('dist/php'))
+//    var buildPHP = gulp.src('app/php/**/*')
+//    .pipe(gulp.dest('dist/php'))
 
-    var buildSvg = gulp.src('app/img/symbol/sprite.svg') // Переносим img в продакшен
-    .pipe(gulp.dest('dist/img/symbol'));
+//    var buildSvg = gulp.src('app/img/symbol/sprite.svg') // Переносим img в продакшен
+//    .pipe(gulp.dest('dist/img/symbol'));
 });
 
 gulp.task('styles', styles);
 gulp.task('img', img);
-gulp.task('svg', svg);
+/*gulp.task('svg', svg);*/
 gulp.task('watch', watch);
 
-gulp.task('default', gulp.series(clean, gulp.parallel(styles, scripts, svg), 'watch'));
-gulp.task('build', gulp.series(clean, img, styles, scripts, svg, 'prebuild'));
+gulp.task('default', gulp.series(clean, gulp.parallel(styles, scripts, /*svg*/), 'watch'));
+gulp.task('build', gulp.series(clean, img, styles, scripts, /*svg,*/ 'prebuild'));

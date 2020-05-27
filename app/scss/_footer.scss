@@ -85,7 +85,12 @@
     flex-direction: column;
 
     &__social-network {
+        position: relative;
+
+        padding: 12.5px;
         margin-bottom: 21px;
+        
+        opacity: 0.5;
 
         transition: transform 0.3s;
 
@@ -94,13 +99,45 @@
             transition: transform 0.3s;
         }
 
+        
+
         &:last-child{
             margin-bottom: 0;
         }
-    }
 
-    &__svg {
-        width: 25px;
-        fill: #f1f1f1;
+        &:nth-child(1)::before{
+            content: '';
+            @extend %tripadvistor_svg_footer;
+            @extend %svg-size-social-network-footer;
+            @extend %svg-position-social-network-footer;
+        }
+
+        &:nth-child(2)::before{
+            content: '';
+            @extend %facebook_svg_footer;
+            @extend %svg-size-social-network-footer;
+            @extend %svg-position-social-network-footer;
+        }
+
+        &:nth-child(3)::before{
+            content: '';
+            @extend %twitter_svg_footer;
+            @extend %svg-size-social-network-footer;
+            @extend %svg-position-social-network-footer;
+        }
+
+        &:nth-child(4)::before{
+            content: '';
+            @extend %vk_svg_footer;
+            @extend %svg-size-social-network-footer;
+            @extend %svg-position-social-network-footer;
+        }
+
+        &:nth-child(5)::before{
+            content: '';
+            @extend %google_svg_footer;
+            @extend %svg-size-social-network-footer;
+            @extend %svg-position-social-network-footer;
+        }
     }
 }
