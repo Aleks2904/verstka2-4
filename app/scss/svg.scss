@@ -160,21 +160,19 @@ $fill-1: #888;
     background-position: center;
 }
 
-
+/* работает */
 
 .test{
     padding: 80px;
     @include svg-1('blue');
 }
 
+
+/* не работает */
+
 $gradiet: linear-gradient(45deg, #EECFBA, #C5DDE8);
 
 .test2{
     padding: 80px;
     @include svg-1($gradiet);
-}
-
-.test3{
-    padding: 80px;
-    @include svg-2('red');
 }

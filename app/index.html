@@ -9,6 +9,8 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
+    <base target="_blank">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -97,11 +99,11 @@
                         Быстрая бронь
                     </h2>
 
-                    <form class="fast-reservation__form">
-                        <input required class="fast-reservation__input" type="text" placeholder="Город">
+                    <form class="fast-reservation__form" action="https://jsonplaceholder.typicode.com/posts" autocomplete="on" method="POST">
+                        <input required class="fast-reservation__input" type="text" name="Город" placeholder="Город">
 
                         <div class="fast-reservation__castom-select">
-                            <select id="js-class">
+                            <select name="Категория номера" id="js-class">
                                 <option value="hide">
                                     Категория номера
                                 </option>
@@ -128,11 +130,11 @@
                             </select> 
                         </div>
 
-                        <input required class="fast-reservation__input" id="js-fast-reservation__masca-data" type="text" placeholder="Дата заселенияы">
+                        <input required class="fast-reservation__input" id="js-fast-reservation__masca-data" type="text" name="Дата заселение" placeholder="Дата заселенияы">
         
-                        <input required class="fast-reservation__input" id="js-fast-reservation__masca-day" type="text" placeholder="Колличествой ночей">
+                        <input required class="fast-reservation__input" id="js-fast-reservation__masca-day" type="text" name="Колличествой ночей" placeholder="Колличествой ночей">
         
-                        <input required class="fast-reservation__input" id="js-fast-reservation__masca-parlor" type="text" placeholder="Колличество гостей">
+                        <input required class="fast-reservation__input" id="js-fast-reservation__masca-parlor" type="text" name="Колличество гостей" placeholder="Колличество гостей">
 
                         <div class="fast-reservation__btn-container">
                             <button type="submit" class="fast-reservation__btn">
@@ -771,12 +773,12 @@
                         Напишите нам
                     </h2>
 
-                    <form class="write-to-us__form">
-                        <input required type="text" class="write-to-us__input" aria-label="введите имя" placeholder="Имя">
+                    <form class="write-to-us__form" action="https://jsonplaceholder.typicode.com/posts" autocomplete="on" method="POST">
+                        <input required type="text" class="write-to-us__input" aria-label="введите имя" name="Имя" placeholder="Имя">
 
-                        <input required type="tel" class="write-to-us__input" id="js-write-to-us__input-mask" aria-label="введите теелфон" placeholder="+7 - (xxx) - xxx - xx - xx">
+                        <input required type="tel" class="write-to-us__input" id="js-write-to-us__input-mask" aria-label="введите теелфон" name="Телефон" placeholder="+7 - (xxx) - xxx - xx - xx">
 
-                        <textarea class="write-to-us__input-message" aria-label="Введите ваше сообщение" placeholder="Сообщение ..."></textarea>
+                        <textarea class="write-to-us__input-message" aria-label="Введите ваше сообщение" name="Сообщение от пользовтеля" placeholder="Сообщение ..."></textarea>
 
                         <button type="submit" class="write-to-us__btn">
                             Отправить
@@ -804,9 +806,9 @@
             </div>
 
             <div class="footer-contacs">
-                <p class="footer-contacs__info-block">
+                <address class="footer-contacs__info-block">
                     11710, улица Юности, дом 5 строение 4, офис 2
-                </p>
+                </address>
 
                 <div class="footer-contacs__tel-block">
                     <a href="tel:+74995356434" class="footer-contacs__link">
