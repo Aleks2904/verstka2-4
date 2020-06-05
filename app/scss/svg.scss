@@ -134,6 +134,8 @@ $fill-1: #888;
 }
 
 
+/* кросбраузерность */
+
 @function str-replace($string, $search, $replace: '') {
     $index: str-index($string, $search); 
     @return if($index, 
@@ -165,6 +167,11 @@ $fill-1: #888;
 .test{
     padding: 80px;
     @include svg-1('blue');
+}
+
+.test3{
+    padding: 80px;
+    @include svg-1('red');
 }
 
 
