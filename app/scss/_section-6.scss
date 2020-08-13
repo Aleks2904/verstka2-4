@@ -1,11 +1,11 @@
 .contacts {
     display: flex;
-    justify-content: space-between;
     margin-bottom: 22px;
 }
 .contacts-block {
     max-width: 472px;
     width: 100%;
+    margin-right: 178px;
 
 		&__title {
             @extend %title-section;
@@ -14,7 +14,7 @@
         }
         
         &__container{
-            background-color: white;
+            background-color: $WHITE;
             border-radius: 12.0px;
             padding: 47px 44px 44px;
             width: 100%;
@@ -28,10 +28,9 @@
 		&__item {
             display: flex;
             align-items: center;
-            justify-content: space-between;
             padding-bottom: 27px;
             margin-bottom: 30px;
-            border-bottom: 1px solid #cccccc;
+            border-bottom: 1px solid $WHITE-GRAY2;
 
             &:last-child{
                 margin-bottom: 0;
@@ -41,28 +40,30 @@
 		&__title-info {
             font-size: 22px;
             font-weight: 700;
-            color: #666666;
+            color: $LIGHT-GRAY;
             max-width: 38%;
             width: 100%;
+
 		}
 
 		&__block-info {
             max-width: 230px;
             width: 100%;
+            text-align: right;
 		}
 
 		&__info {
             font-size: 16px;
             line-height: 24px;
             font-weight: 400;
-            color: #333333;
+            color: $DARK-GREY;
 		}
 
 		&__info-link {
            
             font-size: 16px;
             font-weight: 400;
-            color: #cc9933;
+            color: $DARK-YELLOW;
             display: block;
 
 			&_minor-text {
@@ -71,7 +72,7 @@
 		}
 
 		&__btn {
-            border: 1.0px solid #cc9933;
+            border: 1.0px solid $DARK-YELLOW;
             border-radius: 12.0px;
             background-color: transparent;
             outline: none;
@@ -80,7 +81,7 @@
 
             font-size: 16px;
             font-weight: 700;
-            color: #cc9933;
+            color: $DARK-YELLOW;
 
             transition: transform 0.3s;
 
@@ -155,8 +156,8 @@
         }
 
         &__btn{
-            background-color: #cc9933;
-            border: 1px solid #cc9933;
+            background-color: $DARK-YELLOW;
+            border: 1px solid $DARK-YELLOW;
             border-radius: 12.0px;
             outline: none;
 

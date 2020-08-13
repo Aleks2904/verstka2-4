@@ -10,24 +10,26 @@
     &__list {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
     }
 
     &__item {
         position: relative;
-        background-color: white;
+        background-color: $WHITE;
         width: 25%;
         max-width: 275px;
         padding: 123px 46px 40px 44px;
         margin-bottom: 24px;
+        margin-right: 22px;
         border-radius: 12.0px;
 
-        &:last-child,
-        &:nth-last-child(2),
-        &:nth-last-child(3),
-        &:nth-last-child(4){
-            margin-bottom:0;
+        &:nth-child(n+5){
+            margin-bottom: 0;
         }
+
+        &:nth-child(4n){
+            margin-right: 0;
+        }
+
 
         &:nth-child(1)::before{
             content: '';
@@ -91,13 +93,13 @@
     &__svg {
         max-width: 59px;
         max-height: 70px;
-        fill: blue;
+        fill: $BLUE;
     }
 
     &__subtitle {
         font-size: 16px;
         line-height: 32px;
         font-weight: 400;
-        color: #333333;
+        color: $DARK-GREY;
     }
 }

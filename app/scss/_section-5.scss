@@ -10,15 +10,14 @@
     &__list {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
     }
 
     &__item {
         width: 33%;
         max-width: 370px;
-        background-color: white;
+        background-color: $WHITE;
         border-radius: 12.0px;
-        margin-right: 25px;
+        margin-right: 27px;
         
         padding-bottom: 43px;
         margin-bottom: 25px;
@@ -36,6 +35,21 @@
 
     &__item-all{
         position: relative;
+
+        &::before{
+            content: '';
+            width: 370px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            display: block;
+            background: url('../img/index-img/location_all.webp');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            border-radius: 10px;
+        }
     }
 
     &__img-full{
@@ -47,7 +61,7 @@
     }
 
     &__btn {
-        border: 1.0px solid #cc9933;
+        border: 1.0px solid $DARK-YELLOW;
         border-radius: 12.0px;
         background-color: transparent;
         outline: none;
@@ -59,7 +73,7 @@
 
         font-size: 16px;
         font-weight: 700;
-        color: #cc9933;
+        color: $DARK-YELLOW;
 
         transition: transform 0.3s;
 
@@ -72,24 +86,24 @@
     &__price {
         font-size: 16px;
         font-weight: 400;
-        color: #969696;
+        color: $LIGHT-GRAY3;
         margin-left: 44px;
 
         &_summa {
-            color: #333333;
+            color: $DARK-GREY;
         }
 
         &_strong {
             font-size: 22px;
             font-weight: 700;
-            color: #333333;
+            color: $DARK-GREY;
         }
     }
     
     &__subtitle {
         font-size: 16px;
         font-weight: 400;
-        color: #999999;
+        color: $LIGHT-GRAY2;
         margin-left: 44px;
         margin-bottom: 20px;
     }
@@ -99,11 +113,13 @@
         left: 39px;
         bottom: 52px;
 
+        width: 300px;
+
         padding-right: 20px;
 
         font-size: 22px;
         font-weight: 500;
-        color: #ffffff;
+        color: $WHITE;
 
         &::after{
             content: '';
@@ -141,7 +157,7 @@
     &__title {
         font-size: 16px;
         font-weight: 700;
-        color: #333333;
+        color: $DARK-GREY;
     }
 
     &__group {
@@ -183,7 +199,7 @@
         outline-offset: 0.14px;
     }
 
-    rating__star:hover,
+    .rating__star:hover,
         .rating__star:checked {
             @extend %star-active;
         }

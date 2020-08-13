@@ -10,7 +10,6 @@
 .services-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 
     &__item {
         width: 48.9%;
@@ -21,6 +20,10 @@
 
         margin-bottom: 24px;
         padding-bottom: 40px;
+
+        &:nth-child(odd){
+            margin-right: 24px;
+        }
 
         &:last-child,
         &:nth-last-child(2){
@@ -50,7 +53,7 @@
         position: relative;
         font-size: 22px;
         font-weight: 500;
-        color: #cc9933;
+        color: $DARK-YELLOW;
         padding-right: 20px;
 
         &::after{
@@ -70,7 +73,7 @@
         font-size: 16px;
         line-height: 32px;
         font-weight: 400;
-        color: #333333;
+        color: $DARK-GREY;
         margin-left: 45px;
     }
 }

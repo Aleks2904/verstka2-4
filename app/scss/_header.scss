@@ -6,12 +6,13 @@
     margin:30px 0;
 
     display: flex;
-    justify-content: space-between;
     align-items: center;
 
     &__logo-phone-container{
         display: flex;
         align-items: center;
+
+        margin-right: 548px;
     }
 
     &__logo {
@@ -21,7 +22,7 @@
     &__phone {
         font-weight: 700;
         font-size: 22px;
-        color: #666666;
+        color: $LIGHT-GRAY;
     }
 
     &__personal-area {
@@ -29,7 +30,7 @@
         display: inline-block;
         font-size: 16px;
         font-weight: 400;
-        color: #cc9933;
+        color: $DARK-YELLOW;
 
         padding: 0;
         padding-left: 22px;
@@ -65,18 +66,19 @@
 }
 
 .nav-bar {
-    background-color: white;
-    border: 1px solid white;
+    background-color: $WHITE;
+    border: 1px solid $WHITE;
     border-radius: 12.0px;
 
     display: flex;
-    justify-content: space-between;
     align-items: center;
 
     padding: 11px 21px;
 
 		&__list {
             display: flex;
+
+            margin-right: 124px;
 		}
 
 		&__item {
@@ -87,7 +89,7 @@
 
             &:hover{
                 transform: scale(1.1);
-                border-bottom: 1px solid #333333;
+                border-bottom: 1px solid $DARK-GREY;
                 transition: transform 0.3s;
             }
 
@@ -99,7 +101,8 @@
         &__link{
             font-size: 16px;
             font-weight: 400;
-            color: #333333;
+            color: $DARK-GREY;
+            white-space: nowrap;
         }
         
         &__search-container{
@@ -110,8 +113,8 @@
         }
 
 		&__search {
-            background-color: #f1f1f1;
-            border: 1px solid #f1f1f1;
+            background-color: $ALMOST-WHITE;
+            border: 1px solid $ALMOST-WHITE;
             border-radius: 15.0px;
 
             width: 100%;
@@ -122,7 +125,7 @@
             &::placeholder{
                 font-size: 14px;
                 font-weight: 400;
-                color: #bebebe;
+                color: $WHITE-GRAY;
             }
         }
 
@@ -136,9 +139,11 @@
 
             height: 22px;
 
+            cursor: pointer;
+
             border: none;
             outline: none;
-            background-color: #f1f1f1;
+            background-color: $ALMOST-WHITE;
 
             &::after{
                 content: '';

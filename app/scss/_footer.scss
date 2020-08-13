@@ -4,8 +4,7 @@
     &__container {
         position: relative;
         display: flex;
-        justify-content: space-between;
-        background-color: #333333;
+        background-color: $DARK-GREY;
         border-radius: 12.0px;
         padding:49px 53px 49px 52px;
     }
@@ -14,19 +13,20 @@
 .footer-info {
     max-width: 297px;
     width: 100%;
+    margin-right: 125px;
 
     &__info {
         font-size: 16px;
         line-height: 32px;
         font-weight: 400;
-        color: #ffffff;
+        color: $WHITE;
         margin-bottom: 50px;
     }
 
     &__link {
         font-size: 16px;
         font-weight: 400;
-        color: #cc9933;
+        color: $DARK-YELLOW;
         display: block;
 
         transition: transform 0.3s;
@@ -38,11 +38,12 @@
     }
 }
 .footer-contacs {
+    margin-right: 260px;
 
     &__info-block {
         font-size: 16px;
         font-weight: 400;
-        color: #ffffff;
+        color: $WHITE;
         margin-bottom: 40px;
     }
 
@@ -53,7 +54,7 @@
     &__link {
         font-size: 16px;
         font-weight: 400;
-        color: #cc9933;
+        color: $DARK-YELLOW;
         display: block;
         margin-bottom: 10px;
 
@@ -64,7 +65,7 @@
         transition: transform 0.3s;
 
         &:hover{
-            transform: scale(1.1);
+            transform: scale(1.1) translateX(5%);
             transition: transform 0.3s;
         }
     }
