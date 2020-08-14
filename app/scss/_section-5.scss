@@ -34,22 +34,6 @@
     }
 
     &__item-all{
-        position: relative;
-
-        &::before{
-            content: '';
-            width: 370px;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            display: block;
-            background: url('../img/index-img/location_all.webp');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-
-            border-radius: 10px;
-        }
     }
 
     &__img-full{
@@ -109,36 +93,56 @@
     }
 
     &__link {
-        position: absolute;
-        left: 39px;
-        bottom: 52px;
+        position: relative;
+        display: block;
 
-        width: 300px;
-
-        padding-right: 20px;
+        padding-top: 368px;
+        padding-bottom: 80px;
+        padding-left: 40px;
+        padding-right: 56px;
+      
 
         font-size: 22px;
         font-weight: 500;
         color: $WHITE;
+
+
+        &::before{
+            content: '';
+            width: 370px;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: block;
+            background: url('../img/index-img/location_all.webp');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            border-radius: 10px;
+        }
+    
 
         &::after{
             content: '';
             @extend %arrow-right-section-5;
 
             position: absolute;
-            right: 0;
-            top: 50%;
+            right: 26px;
             
             padding: 8px;
 
-            transform: rotate(90deg) translate(-50%);
+            transform: rotate(90deg) translate(25%, 0%);
         }
 
-        transition: transform 0.3s;
+        transition: color 0.3s;
 
         &:hover{
-            transform: scale(1.1);
-            transition: transform 0.3s;
+            color: $DARK-YELLOW;
+            transition: color 0.3s;
         }
     }
 }
