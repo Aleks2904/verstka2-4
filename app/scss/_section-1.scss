@@ -9,11 +9,7 @@
     &__tilte {
         @extend %title-section;
         margin-bottom: 21px;
-
-        &::first-letter{
-          margin-right: 8px;
-          font-weight: 900;
-        }
+        margin-left: 47px;
     }
 
     &__form{
@@ -212,11 +208,7 @@ $select-padding: 0 60px 0 16px;
         @extend %title-section;
 
         margin-bottom: 21px;
-
-        &::first-letter{
-          margin-right: 8px;
-          font-weight: 900;
-        }
+        margin-left: 47px;
     }
 
     &__content {
