@@ -10,16 +10,17 @@
     &__list {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     &__item {
         position: relative;
         background-color: $WHITE;
         width: 25%;
-        max-width: 275px;
-        padding: 123px 46px 40px 44px;
+        max-width: 260px;
+        max-height: 290px;
+        padding: 123px 20px 40px 44px;
         margin-bottom: 24px;
-        margin-right: 22px;
         border-radius: 12.0px;
 
         &:nth-child(n+5){

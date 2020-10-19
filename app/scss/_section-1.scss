@@ -1,11 +1,8 @@
 .hotel-registration {
-    display: flex;
     margin-bottom: 69px;
 }
 
 .fast-reservation {
-    width: 50%;
-
     &__tilte {
         @extend %title-section;
         margin-bottom: 21px;
@@ -202,8 +199,6 @@ $select-padding: 0 60px 0 16px;
 /* ----------------- */
 
 .special-offer {
-    width: 50%;
-
     &__title {
         @extend %title-section;
 
@@ -264,8 +259,10 @@ $select-padding: 0 60px 0 16px;
         transition: transform 0.3s;
 
         &:hover{
-            transform: scale(1.1);
-            transition: transform 0.3s;
+          transform: scale(1.1);
+          transition: transform 0.3s;
+          color: $YELLOW;
+          text-decoration: none;
         }
 
         &::after{
@@ -273,12 +270,12 @@ $select-padding: 0 60px 0 16px;
           @extend %arrow-right-section-1;
 
           position: absolute;
-          top: 0;
+          top: 45%;
           right: 0;
 
           padding: 7.5px;
 
-          transform: rotate(90deg);
+          transform: translate(0%, -50%) rotate(90deg);
         }
     }
 }

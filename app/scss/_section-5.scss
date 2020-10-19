@@ -10,14 +10,14 @@
     &__list {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     &__item {
         width: 33%;
-        max-width: 370px;
+        max-width: 360px;
         background-color: $WHITE;
         border-radius: 12.0px;
-        margin-right: 27px;
         
         padding-bottom: 43px;
         margin-bottom: 25px;
@@ -34,6 +34,8 @@
     }
 
     &__item-all{
+        width: 33%;
+        max-width: 360px;
     }
 
     &__img-full{
@@ -105,6 +107,8 @@
         font-size: 22px;
         font-weight: 500;
         color: $WHITE;
+
+        white-space: nowrap;
 
 
         &::before{

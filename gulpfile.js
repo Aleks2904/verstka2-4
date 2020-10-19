@@ -23,9 +23,10 @@ const jsFiles = [           //указываем путь к js файлам, п
 ]
 
 const cssFiles = [
+    'app/css/libs/bootstrap-grid.min.css',
     'app/css/libs/normalize.css',
     'app/css/fonts.css',
-    'app/scss/main.scss'
+    'app/scss/main.scss',
 ]
 
 function styles() {

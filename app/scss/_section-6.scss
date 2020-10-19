@@ -1,11 +1,11 @@
 .contacts {
     display: flex;
     margin-bottom: 22px;
+    justify-content: space-between;
 }
 .contacts-block {
     max-width: 472px;
     width: 100%;
-    margin-right: 178px;
 
 		&__title {
             @extend %title-section;
@@ -94,7 +94,6 @@
 		}
 }
 .write-to-us {
-        margin-right: 180px;
 
 		&__title {
             @extend %title-section;
