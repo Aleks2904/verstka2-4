@@ -1,7 +1,9 @@
 .contacts {
-    display: flex;
     margin-bottom: 22px;
-    justify-content: space-between;
+
+    &__container{
+        justify-content: space-between;
+    }
 }
 .contacts-block {
     max-width: 472px;
