@@ -8,13 +8,17 @@
     }
 
     &__list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+
+    }
+
+    &__list-row{
+        &:not(:last-child){
+            margin-bottom: 30px;
+        }
     }
 
     &__item {
-        width: 33%;
+
         max-width: 360px;
         background-color: $WHITE;
         border-radius: 12.0px;
@@ -34,8 +38,8 @@
     }
 
     &__item-all{
-        width: 33%;
         max-width: 360px;
+        max-height: 460px;
     }
 
     &__img-full{
@@ -99,7 +103,7 @@
         display: block;
 
         padding-top: 368px;
-        padding-bottom: 80px;
+        padding-bottom: 70px;
         padding-left: 40px;
         padding-right: 56px;
       
@@ -113,7 +117,7 @@
 
         &::before{
             content: '';
-            width: 370px;
+            width: 100%;
             position: absolute;
             z-index: -1;
             top: 0;

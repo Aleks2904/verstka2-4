@@ -8,88 +8,84 @@
     }
 
     &__list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+
+    }
+
+    &__row{
+        &:not(:last-child){
+            margin-bottom: 24px;
+        }
     }
 
     &__item {
         position: relative;
         background-color: $WHITE;
-        width: 25%;
         max-width: 260px;
         max-height: 290px;
         padding: 123px 20px 40px 44px;
-        margin-bottom: 24px;
         border-radius: 12.0px;
 
-        &:nth-child(n+5){
-            margin-bottom: 0;
-        }
+    }
 
-        &:nth-child(4n){
-            margin-right: 0;
-        }
-
-
-        &:nth-child(1)::before{
+    &__item-container1{
+        &:nth-child(1) > .advantages__item::before{
             content: '';
             @extend %advantages_1;
             @extend %svg-size-section-4;
             @extend %svg-position-section-4;
         }
 
-        &:nth-child(2)::before{
+        &:nth-child(2) > .advantages__item::before{
             content: '';
             @extend %advantages_2;
             @extend %svg-size-section-4;
             @extend %svg-position-section-4;
         }
 
-        &:nth-child(3)::before{
+        &:nth-child(3) > .advantages__item::before{
             content: '';
             @extend %advantages_3;
             @extend %svg-size-section-4;
             @extend %svg-position-section-4;
         }
 
-        &:nth-child(4)::before{
+        &:nth-child(4) > .advantages__item::before{
             content: '';
             @extend %advantages_4;
             @extend %svg-size-section-4;
             @extend %svg-position-section-4;
         }
+    }
 
-        &:nth-child(5)::before{
+    &__item-container2{
+        &:nth-child(1) > .advantages__item::before{
             content: '';
             @extend %advantages_5;
             @extend %svg-size-section-4;
             @extend %svg-position-section-4;
         }
 
-        &:nth-child(6)::before{
+        &:nth-child(2) > .advantages__item::before{
             content: '';
             @extend %advantages_6;
             @extend %svg-size-section-4;
             @extend %svg-position-section-4;
         }
 
-        &:nth-child(7)::before{
+        &:nth-child(3) > .advantages__item::before{
             content: '';
             @extend %advantages_7;
             @extend %svg-size-section-4;
             @extend %svg-position-section-4;
         }
 
-        &:nth-child(8)::before{
+        &:nth-child(4) > .advantages__item::before{
             content: '';
             @extend %advantages_8;
             @extend %svg-size-section-4;
             @extend %svg-position-section-4;
         }
     }
-
-
 
     &__svg {
         max-width: 59px;

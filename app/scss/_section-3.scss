@@ -8,22 +8,21 @@
     }
 }
 .services-list {
-    display: flex;
-    flex-wrap: wrap;
+    &__row{
+        justify-content: space-between;   
+        &:not(:last-child){
+            margin-bottom: 30px;
+        }
+    }
 
     &__item {
-        width: 48.9%;
-        max-width: 572px;
+        max-width: 572px !important;
 
         border-radius: 12.0px;
         background-color: white;
 
         margin-bottom: 24px;
         padding-bottom: 40px;
-
-        &:nth-child(odd){
-            margin-right: 24px;
-        }
 
         &:last-child,
         &:nth-last-child(2){
@@ -69,7 +68,7 @@
     }
 
     &__subtitle {
-        width: 70%;
+        width: 72%;
         font-size: 16px;
         line-height: 32px;
         font-weight: 400;
