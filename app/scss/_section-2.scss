@@ -2,13 +2,17 @@
     padding-left: 42px;
     margin-bottom: 66px;
 
+    &__row{
+        &:not(:last-child){
+            margin-bottom: 27px;
+        }
+    }
+
     &__title {
         @extend %title-section;
-        margin-bottom: 27px;
     }
 
     &__subtitle {
         @extend %subtitle-section;
-        max-width: 80%;
     }
 }
